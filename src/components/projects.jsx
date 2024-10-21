@@ -68,7 +68,7 @@ export default function Projects() {
             alt="coding_svg"
             id="coding"
             // Adjusted width and height for increased size
-            style={{ width: '500px', height: 'auto' }}
+            style={{ width: '470px', height: 'auto' }}
           />
         </BrowserView>
         <div className="flex flex-col justify-between mt-28 mb-16">
