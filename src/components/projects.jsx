@@ -7,7 +7,7 @@ const dummyProjects = [
   {
     _id: "1",
     title: "Hospital Appointment Manager - Web Development",
-    description: "This is a brief description of Project One.This responsive web platform allows users to seamlessly book appointments with doctors at their preferred hospitals. It offers a user-friendly interface where patients can browse available doctors, view time slots, and schedule appointments effortlessly. The platform ensures smooth coordination between users and hospitals, improving appointment management. Built with HTML, CSS for front-end, Node.js for backend, and Firebase for data storage, the system supports real-time updates and secure data handling.",
+    description: "This is a brief description of Project One. This responsive web platform allows users to seamlessly book appointments with doctors at their preferred hospitals. It offers a user-friendly interface where patients can browse available doctors, view time slots, and schedule appointments effortlessly. The platform ensures smooth coordination between users and hospitals, improving appointment management. Built with HTML, CSS for front-end, Node.js for backend, and Firebase for data storage, the system supports real-time updates and secure data handling.",
     Thumbnail_link: "/assets/project1.jpg",
     date: "2022-09-01",
   },
@@ -15,13 +15,13 @@ const dummyProjects = [
     _id: "2",
     title: "Inspiring Go - Full Stack Development (MERN)",
     description: "This is a brief description of Project Two. A full-stack platform revolutionizing the delivery and access of consultancy services. It connects consultants with clients from diverse industries, catering to both experienced professionals and students seeking expert guidance. The platform streamlines consultations, making expert advice more accessible and enhancing the client-consultant experience.",
-    Thumbnail_link: "/assets/project3.avif",
+    Thumbnail_link: "/assets/project2.avif",
     date: "2023-06-13",
   },
   {
     _id: "3",
     title: "Glaucoma Diagnosis using Retinal Fundus Images",
-    description: "This is a brief description of Project Three.This project focuses on early diagnosis of glaucoma using retinal fundus images and various classifiers. It compares the effectiveness of several algorithms, including Support Vector Machine, Random Forest, and Decision Trees, to determine their performance in detecting the disease. The study also investigates advanced classifiers like AdaBoost and Convolutional Neural Networks (CNN) to enhance diagnostic accuracy. By analyzing key metrics, the project aims to highlight the strengths and weaknesses of each classification technique.",
+    description: "This is a brief description of Project Three. This project focuses on early diagnosis of glaucoma using retinal fundus images and various classifiers. It compares the effectiveness of several algorithms, including Support Vector Machine, Random Forest, and Decision Trees, to determine their performance in detecting the disease. The study also investigates advanced classifiers like AdaBoost and Convolutional Neural Networks (CNN) to enhance diagnostic accuracy. By analyzing key metrics, the project aims to highlight the strengths and weaknesses of each classification technique.",
     Thumbnail_link: "/assets/project3.avif",
     date: "2024-03-30",
   },
@@ -60,12 +60,23 @@ export default function Projects() {
       }}
     >
       <div className="flex flex-row justify-between mr-12">
+        {/* Image for BrowserView */}
         <BrowserView className="hidden md:block mt-2">
-          <img className="absolute max-w-xl mt-32 ml-20 mr-16 animate-slideIn" src="/assets/coding.svg" alt="an_svg" id="coding"/>
+          <img
+            className="absolute w-48 max-w-xl mt-32 ml-20 mr-16 animate-slideIn"
+            src="/assets/coding.svg"
+            alt="an_svg"
+            id="coding"
+            // Adjusted width
+            style={{ width: '150px' }}
+          />
         </BrowserView>
         <div className="flex flex-col justify-between mt-28 mb-16">
           {dummyProjects.map((project, index) => (
-            <div key={project._id} style={{ animation: `slideUp 0.5s ease-in-out ${index * 0.1}s` }}>
+            <div
+              key={project._id}
+              style={{ animation: `slideUp 0.5s ease-in-out ${index * 0.1}s` }}
+            >
               <Link
                 to={`/projects/${project._id}/view`}
                 state={{ project }}
