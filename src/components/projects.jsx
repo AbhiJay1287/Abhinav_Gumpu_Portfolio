@@ -15,7 +15,7 @@ const dummyProjects = [
     _id: "2",
     title: "Inspiring Go - Full Stack Development (MERN)",
     description: "This is a brief description of Project Two. A full-stack platform revolutionizing the delivery and access of consultancy services. It connects consultants with clients from diverse industries, catering to both experienced professionals and students seeking expert guidance. The platform streamlines consultations, making expert advice more accessible and enhancing the client-consultant experience.",
-    Thumbnail_link: "/assets/project2.avif",
+    Thumbnail_link: "/assets/project3.avif",
     date: "2023-06-13",
   },
   {
