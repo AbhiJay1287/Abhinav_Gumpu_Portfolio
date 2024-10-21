@@ -61,7 +61,7 @@ export default function Projects() {
     >
       <div className="flex flex-row justify-between mr-12">
         <BrowserView className="hidden md:block mt-2">
-          <img className="absolute max-w-xl mt-32 ml-20 mr-16 animate-slideIn" src="/assets/pro_coderr.png" alt="an_svg" id="coding"/>
+          <img className="absolute max-w-3xl mt-32 ml-20 animate-slideIn" src="/assets/pro_coderr.png" alt="an_svg" id="coding"/>
         </BrowserView>
         <div className="flex flex-col justify-between mt-28 mb-16">
           {dummyProjects.map((project, index) => (
