@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background:linear-gradient(135deg, rgb(141, 209, 255,1) 0%,rgba(255, 250, 118, 0.75) 700%),
+    url(""),
+    url("unsplash.jpg") ;
+	background-repeat: repeat, repeat, no-repeat;
+	background-position: center center;
+  background-size: 100%, 15%;
+  z-index: -1;
+}
+
+
+/* for home landing pg start*/
+* {
+  margin: 0;
+  font-family: Poppins;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --secondary-color: #000000;
+  /* --contrast-color: #fffac0; */
+  --contrast-color: rgb(141, 209, 255);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 115vh;
+  z-index: -10;
+  background-color: var(--contrast-color);
+}
+.containeraa {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand 0.8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  transition: all 0.8s ease;
+}
+.container_content {
+  width: 50%;
+}
+.container_content_inner {
+  width: 80%;
+  margin-left: 80px;
+}
+.container_outer_img {
+  margin: 50px;
+  width: 50%;
+  /* overflow:hidden; */
+}
+.container_img {
+  width: 80%;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-in-out forwards, floating 3s ease-in-out infinite;
+}
+
+
+#coding{
+  animation: slideIn 0.5s ease-in-out forwards, floating 3s ease-in-out infinite
+}
+
+.par {
+  height: auto;
+  overflow: hidden;
+}
+.myhomepara {
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp 0.8s ease-in-out forwards 0.8s;
+}
+.btns {
+  height: 100%;
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+}
+.btns_more {
+  /* background: transparent; */ /* Uncomment this if needed */
+  border-radius: 50px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 30px;
+  outline: none;
+  transform: translateY(50px);
+  animation: slideUp 0.8s ease-in-out forwards 1s;
+  border: 2px solid #fff; /* Explicit border style and color */
+}
+
+.btns_more:hover {
+  background: var(--contrast-color);
+  cursor: pointer;
+  color: #151226;
+  border: 1px solid transparent;
+}
+/* .btns_more:active {
+  background: #000000;
+  color:wheat
+} */
+.title {
+  overflow: hidden;
+  height: auto;
+}
+.projecttilt {
+  font-size: 40px;
+  color: var(--contrast-color);
+  margin-bottom: 20px;
+  transform: translateY(100px);
+  animation: slideUp 0.8s ease forwards 0.5s;
+}
+.projecttiltmobile {
+  font-size: 25px;
+  color: var(--contrast-color);
+  margin-bottom: 20px;
+  transform: translateY(100px);
+  animation: slideUp 0.8s ease forwards 0.5s;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  33% {
+    transform: translate(0, 15px);
+  }
+  66% {
+    transform: translate(-15px, 0);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* for home landing pg  end*/
+
+
+/* For 1366 Resolution */  
+@media only screen   
+and (min-width: 1030px)   
+and (max-width: 1366px)  
+{
+  .adminbg{
+  /* background-image: url("unsplash_admin_bg.jpg"); */
+}
+}  
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideInGrow {
+  0% {
+    transform: translateY(100px) scale(0.8); /* Start below and smaller */
+    opacity: 0; /* Start transparent */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* End at original position and size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Define your animation */
+@keyframes slideInGrow {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideInGrow 0.65s ease-in-out;
+}
+
+/* Base styles for the project card */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and shadow */
+}
+
+/* Hover effect for enlarging animation */
+.project-card:hover {
+  transform: scale(1.05); /* Scale up effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Add shadow on hover for depth */
+}
+
+/* Optionally, you can also change the background color on hover */
+.project-card:hover {
+  background-color: #f9fafb; /* Change background color for visual feedback */
+}
+
+
+/* Add this to your CSS file */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards; /* Adjust the duration as needed */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+#proj {
+    background-image: url(../assets/unsplash.jpg); /* Use hyphenated property names */
+    background-size: cover; /* No quotes needed */
+    background-position: center; /* No quotes needed */
+    min-height: 100vh; /* No quotes needed */
+}
