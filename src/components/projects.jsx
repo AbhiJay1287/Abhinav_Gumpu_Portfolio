@@ -64,7 +64,7 @@ export default function Projects() {
         <BrowserView className="hidden md:block mt-2">
           <img
             className="absolute w-48 max-w-xl mt-32 ml-20 mr-16 animate-slideIn"
-            src="/assets/coding.svg"
+            src="/assets/pro_coderr.png"
             alt="an_svg"
             id="coding"
             // Adjusted width
